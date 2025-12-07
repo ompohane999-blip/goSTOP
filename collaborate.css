@@ -1,0 +1,392 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  color: #111827;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.7), transparent);
+  color: #fff;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+}
+
+.logo img {
+  height: 36px;
+  display: block;
+}
+
+.menu-toggle {
+  display: none;
+  background: transparent;
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-size: 14px;
+}
+
+.nav-links > a,
+.nav-links .nav-item > a {
+  opacity: 0.9;
+}
+
+.nav-links > a:hover,
+.nav-links .nav-item > a:hover {
+  opacity: 0.5;
+}
+
+.active-link {
+  opacity: 1;
+  font-weight: 600;
+  border-bottom: 2px solid #ff3366;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 16px;
+  background: rgba(15, 15, 15, 0.96);
+  color: #ffffff;
+  border-radius: 18px;
+  padding: 24px 32px 20px;
+  min-width: 780px;
+  display: none;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.5);
+  z-index: 30;
+}
+
+.nav-item-destinations:hover .mega-menu {
+  display: block;
+}
+
+.mega-menu-columns {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 32px;
+  font-size: 13px;
+}
+
+.mega-column {
+  min-width: 180px;
+  max-width: 220px;
+}
+
+.mega-column a,
+.mega-column p {
+  margin-bottom: 6px;
+  cursor: pointer;
+  display: block;
+}
+
+.mega-column a:hover,
+.mega-column p:hover {
+  text-decoration: underline;
+}
+
+.mega-tag {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 2px 6px;
+  border-radius: 999px;
+  background: #ffed9b;
+  color: #333;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.mega-footer {
+  margin-top: 18px;
+  text-align: center;
+}
+
+.mega-view-btn {
+  display: inline-block;
+  padding: 10px 28px;
+  border-radius: 999px;
+  background: #ff4b73;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 12px;
+  background: rgba(15,15,15,0.96);
+  border-radius: 16px;
+  padding: 12px 18px;
+  min-width: 220px;
+  display: none;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.45);
+  z-index: 25;
+}
+
+.dropdown-menu a {
+  display: block;
+  font-size: 13px;
+  color: #ffffff;
+  padding: 4px 0;
+  opacity: 0.9;
+}
+
+.dropdown-menu a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.nav-item-business:hover .dropdown-menu,
+.nav-item-collab:hover .dropdown-menu {
+  display: block;
+}
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+}
+
+.btn-outline {
+  padding: 7px 16px;
+  border-radius: 999px;
+  border: 1px solid #cfcece;
+  background: #ffffff;
+  color: #2a2929;
+}
+
+.btn-login {
+  padding: 8px 20px;
+  border-radius: 999px;
+  background: linear-gradient(90deg,#ff3366,#ff1a53);
+  color: #fff;
+  font-weight: 600;
+}
+
+.cards-section {
+  background-color: #f9fafb;
+  padding: 120px 24px 64px; 
+}
+
+.cards-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.collab-card {
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  padding: 28px 32px;
+  display: grid;
+  grid-template-columns: 1.6fr 1.2fr;
+  gap: 16px;
+  align-items: center;
+}
+
+.card-title {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.pink {
+  color: #ff2d75;
+}
+
+.card-text {
+  font-size: 15px;
+  color: #6b7280;
+  margin-bottom: 16px;
+}
+
+.card-link {
+  font-size: 14px;
+  color: #111827;
+  text-decoration: underline;
+}
+
+.card-image img {
+  width: 100%;
+  max-width: 260px;
+  display: block;
+}
+
+.footer {
+  background: #6550d6;
+  color: #ffffff;
+  padding: 48px 24px 56px;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 40px;
+}
+
+.footer-heading {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #ffcc66;
+}
+
+.social-row {
+  display: flex;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.social-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #7c67ee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.footer-list {
+  list-style: none;
+  font-size: 14px;
+}
+
+.footer-list li + li {
+  margin-top: 6px;
+}
+
+.footer-list a {
+  text-decoration: none;
+  color: #f9fafb;
+}
+
+.footer-list a:hover {
+  text-decoration: underline;
+}
+
+.contact-list li {
+  line-height: 1.5;
+}
+
+@media (max-width: 992px) {
+  .cards-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .collab-card {
+    grid-template-columns: 1fr;
+  }
+
+  .card-image {
+    text-align: center;
+  }
+
+  .card-image img {
+    max-width: 220px;
+  }
+
+  .footer-inner {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 960px) {
+
+  .nav-buttons {
+    display: none; 
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(15,15,15,0.98);
+    padding: 16px 20px 20px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links > a,
+  .nav-links .nav-item > a {
+    display: block;
+    opacity: 0.9;
+  }
+
+  .mega-menu,
+  .dropdown-menu {
+    display: none !important;
+  }
+
+  .cards-section {
+    padding-top: 110px;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .cards-section {
+    padding-top: 110px;
+  }
+}
